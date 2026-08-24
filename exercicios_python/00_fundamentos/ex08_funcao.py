@@ -25,10 +25,14 @@ Restricoes:
 # Escreva sua solucao abaixo:
 
 def eh_primo(n: int) -> bool:
-    pass
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-
-if __name__ == "__main__":
-    print(eh_primo(7))   # esperado: True
-    print(eh_primo(8))   # esperado: False
-    print(eh_primo(1))   # esperado: False
+print(eh_primo(17))
+print(eh_primo(20))
+print(eh_primo(14))
+print(eh_primo(9))
