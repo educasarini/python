@@ -29,3 +29,15 @@ Restricoes:
 
 # Escreva sua solucao abaixo:
 
+imc = float(input("Digite IMC: "))
+
+if imc < 18.5:
+    categoria = "Abaixo do peso"
+elif imc < 25:
+    categoria = "Peso normal"
+elif imc < 30:
+    categoria = "Sobrepeso"
+else:
+    categoria = "Obesidade"
+
+print(f"Categoria: {categoria}")
