@@ -42,3 +42,16 @@ Restricoes:
 
 # Escreva sua solucao abaixo:
 
+numero = int(input("Digite número: "))
+minimo = int(input("Digite mínimo: "))
+maximo = int(input("Digite máximo: "))
+
+intervalo =  minimo <= numero <= maximo
+
+fora_intervalo = not intervalo
+
+par_positivo =  numero % 2 == 0 and numero > 0
+
+print(f"Dentro do intervalo: {intervalo}")
+print(f"Par e positivo: {par_positivo}")
+print(f"Fora do intervalo: {fora_intervalo}")
