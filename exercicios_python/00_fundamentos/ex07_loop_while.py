@@ -24,3 +24,12 @@ Restricoes:
 
 # Escreva sua solucao abaixo:
 
+n = int(input("Digite número inteiro positivo: "))
+
+soma = 0
+
+while n > 0:
+    soma += n % 10
+    n //= 10
+
+print(f"Soma: {soma}")
