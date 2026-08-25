@@ -33,10 +33,15 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        pass
+
+        for i, n in enumerate(nums):
+            j = len(nums) - 1
+            while j > i:
+                if target == n + nums[j]:
+                    return [i, j]
+                j -= 1
 
 
-if __name__ == "__main__":
-    print(Solution().twoSum([2, 7, 11, 15], 9))   # esperado: [0, 1]
-    print(Solution().twoSum([3, 2, 4], 6))         # esperado: [1, 2]
-    print(Solution().twoSum([3, 3], 6))            # esperado: [0, 1]
+print(Solution().twoSum([2, 7, 11, 15], 9))   # esperado: [0, 1]
+print(Solution().twoSum([3, 2, 4], 6))         # esperado: [1, 2]
+print(Solution().twoSum([3, 3], 6))            # esperado: [0, 1]
