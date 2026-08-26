@@ -25,10 +25,14 @@ Restricoes:
 - -1000 <= numeros[i] <= 1000
 """
 
+# assim como range, ele faz início (contando o que escrevi) e fim (não conta esse, mas sim o anterior)
+
 # Escreva sua solucao abaixo:
 
+
 def soma_metades(numeros: list[int]) -> list[int]:
-    pass
+    i = len(numeros) // 2
+    return [sum(numeros[:i]), sum(numeros[i:])]
 
 
 print(soma_metades([1, 2, 3, 4]))               # esperado: [3, 7]
