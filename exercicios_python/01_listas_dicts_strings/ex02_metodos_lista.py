@@ -29,7 +29,9 @@ Restricoes:
 
 
 def furar_fila(fila: list[int], senha: int) -> list[int]:
-    pass
+    fila.remove(senha)
+    fila.insert(0, senha)
+    return fila
 
 
 print(furar_fila([5, 3, 8, 1], 8))   # esperado: [8, 5, 3, 1]
