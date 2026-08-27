@@ -28,8 +28,22 @@ Restricoes:
 
 
 def contar_votos(votos: list[str]) -> dict[str, int]:
-    pass
+    d = {}
 
+    for n in votos:
+        if n in d:
+            d[n] += 1
+        else:
+            d[n] = 1
+    return d
+
+'''
+d = {}
+
+for n in votos:
+    d[n] = d.get(n, 0) + 1
+return d
+'''
 
 # esperado: {"ana": 2, "bruno": 1}
 print(contar_votos(["ana", "bruno", "ana"]))
@@ -39,3 +53,6 @@ print(contar_votos(["carla"]))
 
 # esperado: {"ana": 3}
 print(contar_votos(["ana", "ana", "ana"]))
+
+# esperado: {"ana: 2, "bruno: 1}
+print(contar_votos(["ana", "ana", "bruno"]))
