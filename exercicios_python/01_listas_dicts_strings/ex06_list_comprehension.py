@@ -27,7 +27,7 @@ Restricoes:
 
 
 def quadrados_pares(numeros: list[int]) -> list[int]:
-    pass
+    return [item**2 for item in numeros if item % 2 == 0]
 
 
 print(quadrados_pares([1, 2, 3, 4, 5, 6]))  # esperado: [4, 16, 36]
