@@ -27,7 +27,7 @@ Restricoes:
 
 
 def inverter_palavras(frase: str) -> str:
-    pass
+    return " ".join(frase.split()[::-1])
 
 
 # esperado: "roupa a roeu rato o"
