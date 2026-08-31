@@ -33,7 +33,7 @@ Restricoes:
 def interesses_em_comum(
     interesses_a: list[str], interesses_b: list[str]
 ) -> set[str]:
-    pass
+    return set(interesses_a) & (set(interesses_b)) # .intersection() = & // .difference = - // .union = | 
 
 
 print(interesses_em_comum(
