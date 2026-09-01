@@ -27,10 +27,17 @@ Restricoes:
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        pass
+        d = {}
+        d_2 = {}
 
+        for n in s:
+            d[n] = d.get(n, 0) + 1
+        for m in t:
+            d_2[m] = d_2.get(m, 0) + 1
+        return d == d_2
 
 if __name__ == "__main__":
     print(Solution().isAnagram("anagram", "nagaram"))  # esperado: True
     print(Solution().isAnagram("rat", "car"))           # esperado: False
     print(Solution().isAnagram("a", "ab"))               # esperado: False
+    print(Solution().isAnagram("aab", "abb"))               # esperado: False
