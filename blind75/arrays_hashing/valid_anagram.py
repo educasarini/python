@@ -24,6 +24,11 @@ Restricoes:
 - s e t consistem apenas de letras minusculas do alfabeto ingles
 """
 
+# from collections import Counter
+    # return Counter(s) == Counter(t) --> faz todo o bloco de gerar dicionário e contar a frequência e atrelar a chave já
+
+    # return "igualdade" ou algum comparativo retorna True ou False se estiver certo ou errado
+
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
